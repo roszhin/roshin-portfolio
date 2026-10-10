@@ -117,7 +117,7 @@ export default function App() {
           </div>
           <div className="hero-portrait-wrap">
             <div className="portrait-index" aria-hidden="true"><span>RSH / 01</span><span>Portrait</span></div>
-            <img className="hero-portrait" src="/images/profile-professional.png" alt="Roshin R S wearing a dark blazer and white shirt" />
+            <img className="hero-portrait" src={`${import.meta.env.BASE_URL}images/profile-professional.png`} alt="Roshin R S wearing a dark blazer and white shirt" />
             <div className="portrait-caption"><span>ROSHIN R S</span><span>SOFTWARE DEVELOPER</span></div>
           </div>
           <div className="hero-bottom"><span>Academic & personal projects</span><span>Scroll to explore <b aria-hidden="true">↓</b></span><span>Open to opportunities</span></div>
