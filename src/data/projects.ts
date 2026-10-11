@@ -12,6 +12,7 @@ export type Project = {
   evidence: string[];
   source?: string;
   demo?: string;
+  demoAccounts?: { role: string; username: string; password: string }[];
   cover?: string;
 };
 
@@ -20,6 +21,29 @@ const publicBase = import.meta.env.BASE_URL;
 // Archive names are retained as evidence so the public case studies can be
 // refreshed when the source projects change. No deployment URLs were present.
 export const projects: Project[] = [
+  {
+    slug: 'placement-prediction',
+    title: 'AI Placement Prediction',
+    category: 'AI & analytics',
+    summary: 'A placement prediction and skill-gap analysis application with student, company, faculty, and admin areas.',
+    stack: ['Java 21', 'Spring Boot', 'Thymeleaf', 'Python', 'MySQL'],
+    image: `${publicBase}images/projects/placement-prediction.jpg`,
+    demo: 'https://placement-prediction-hael.onrender.com',
+    demoAccounts: [
+      { role: 'Admin', username: 'admin@skill.com', password: 'admin123' },
+      { role: 'Faculty', username: 'faculty@skill.com', password: 'faculty123' },
+      { role: 'Company', username: 'careers@google.com', password: 'GoogleHR@123' },
+      { role: 'Company', username: 'jobs@microsoft.com', password: 'MicrosoftHR@123' },
+      { role: 'Student', username: 'arjun@gmail.com', password: 'password123' },
+      { role: 'Student', username: 'sneha@gmail.com', password: 'password123' },
+    ],
+    cover: '#292a2c',
+    problem: 'Students and campus teams need to compare skills and placement readiness with available job requirements.',
+    solution: 'The application includes role-specific workflows for students, companies, faculty, and administrators, including resume analysis and AI analysis components.',
+    features: ['Resume analysis workflow', 'Student and company application areas', 'Faculty and admin controllers', 'Placement and skill analysis modules'],
+    architecture: 'A Spring Boot 3.3 application with Java 21, Spring MVC, Thymeleaf, Security, JPA, and WebFlux. Python scripts support seeding and UI migration.',
+    evidence: ['Placement Prediction.zip — pom.xml, Java controllers and entities, ResumeAnalysisController.java, generate_seeder.py'],
+  },
   {
     slug: 'advanced-digital-learning',
     title: 'Advanced Digital Learning',
@@ -159,21 +183,6 @@ export const projects: Project[] = [
     features: ['Train and passenger records', 'Ticket request and approval pages', 'Employee and administrator workflows', 'Accounting and ticket management pages'],
     architecture: 'A PHP portal with role-specific admin and employee areas backed by a MySQL schema for passengers, trains, tickets, employees, and administrators.',
     evidence: ['ORRS.zip — admin/, employee/, passenger/, DATABASE FILE/orrsphp.sql'],
-  },
-  {
-    slug: 'placement-prediction',
-    title: 'AI Placement Prediction',
-    category: 'AI & analytics',
-    summary: 'A placement prediction and skill-gap analysis application with student, company, faculty, and admin areas.',
-    stack: ['Java 21', 'Spring Boot', 'Thymeleaf', 'Python', 'MySQL'],
-    image: `${publicBase}images/projects/placement-prediction.jpg`,
-    demo: 'https://placement-prediction-hael.onrender.com',
-    cover: '#292a2c',
-    problem: 'Students and campus teams need to compare skills and placement readiness with available job requirements.',
-    solution: 'The application includes role-specific workflows for students, companies, faculty, and administrators, including resume analysis and AI analysis components.',
-    features: ['Resume analysis workflow', 'Student and company application areas', 'Faculty and admin controllers', 'Placement and skill analysis modules'],
-    architecture: 'A Spring Boot 3.3 application with Java 21, Spring MVC, Thymeleaf, Security, JPA, and WebFlux. Python scripts support seeding and UI migration.',
-    evidence: ['Placement Prediction.zip — pom.xml, Java controllers and entities, ResumeAnalysisController.java, generate_seeder.py'],
   },
   {
     slug: 'vehicle-breakdown-assistance',
