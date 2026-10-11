@@ -167,6 +167,7 @@ export const projects: Project[] = [
     summary: 'A placement prediction and skill-gap analysis application with student, company, faculty, and admin areas.',
     stack: ['Java 21', 'Spring Boot', 'Thymeleaf', 'Python', 'MySQL'],
     image: `${publicBase}images/projects/placement-prediction.jpg`,
+    demo: 'https://placement-prediction-hael.onrender.com',
     cover: '#292a2c',
     problem: 'Students and campus teams need to compare skills and placement readiness with available job requirements.',
     solution: 'The application includes role-specific workflows for students, companies, faculty, and administrators, including resume analysis and AI analysis components.',
