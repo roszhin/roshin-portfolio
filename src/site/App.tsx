@@ -143,7 +143,7 @@ export default function App() {
           <div className="archive-panel">
             <div className="archive-heading reveal"><div><p className="small-label">{projects.length} source archives</p><h2 id="work-title">Work that<br /><em>solves something.</em></h2></div><p className="archive-note">Open any project for its screenshots, features, and implementation notes. Move between projects from the detail view.</p></div>
             <div className="project-grid">
-              {projects.map((project, index) => <article className={`project-card ${index % 5 === 0 ? 'project-card-featured' : ''}`} key={project.slug}>
+              {projects.map((project, index) => <article className="project-card" key={project.slug}>
                 <button className="project-open" onClick={() => setSelectedIndex(index)} aria-label={`Open details for ${project.title}`}>
                   <div className="project-image"><div className="project-index">{String(projects.indexOf(project) + 1).padStart(2, '0')}</div>{project.image ? <img src={project.image} alt={`${project.title} application screenshot`} loading="lazy" /> : <ProjectPreview project={project} />}<span className="project-arrow" aria-hidden="true">↗</span></div>
                   <div className="project-meta"><div><h3>{project.title}</h3><p>{project.summary}</p></div><div className="tag-list">{project.stack.slice(0, 4).map((tag) => <span key={tag}>{tag}</span>)}</div></div>
