@@ -11,6 +11,6 @@ export const site = {
     { degree: 'Bachelor of Computer Applications', institution: 'Malankara Catholic College', status: 'Completed' },
   ],
   contactEmail: 'rsroshin7@gmail.com',
-  github: '',
+  github: 'https://github.com/roszhin',
   linkedin: 'https://www.linkedin.com/in/roshin-r-s-6583252a8/',
 };
