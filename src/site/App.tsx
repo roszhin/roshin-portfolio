@@ -56,22 +56,6 @@ function ProjectDetail({ project, index, total, previousTitle, nextTitle, onNavi
         <h2 id="project-detail-title">{project.title}</h2>
         <p className="detail-lede">{project.summary}</p>
         {project.image ? <figure className="detail-screenshot"><img src={project.image} alt={`${project.title} running locally`} /><figcaption>Screenshot captured from the supplied project running locally. Any visible contact details or personal identifiers have been hidden.</figcaption></figure> : <><ProjectPreview project={project} large /><p className="preview-disclaimer">Illustrative interface preview based on the archive’s documented features.</p></>}
-        {project.demo && <section className="detail-demo-access" aria-labelledby="demo-access-title">
-          <div className="detail-demo-heading">
-            <div><p className="small-label">Live project</p><h3 id="demo-access-title">Try it yourself</h3></div>
-            <a className="detail-demo-link" href={project.demo} target="_blank" rel="noreferrer">Open live project <span aria-hidden="true">↗</span></a>
-          </div>
-          {project.demoAccounts && <div className="detail-demo-accounts">
-            <h4>Demo login accounts</h4>
-            <ul>{project.demoAccounts.map((account) => <li className="detail-demo-account" key={account.username}>
-              <strong className="detail-demo-role">{account.role}</strong>
-              <dl>
-                <div><dt>Email / Username</dt><dd><code>{account.username}</code></dd></div>
-                <div><dt>Password</dt><dd><code>{account.password}</code></dd></div>
-              </dl>
-            </li>)}</ul>
-          </div>}
-        </section>}
         <div className="detail-grid">
           <section><h3>The problem</h3><p>{project.problem}</p></section>
           <section><h3>The approach</h3><p>{project.solution}</p></section>

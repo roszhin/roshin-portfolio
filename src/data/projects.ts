@@ -11,8 +11,6 @@ export type Project = {
   architecture: string;
   evidence: string[];
   source?: string;
-  demo?: string;
-  demoAccounts?: { role: string; username: string; password: string }[];
   cover?: string;
 };
 
@@ -28,15 +26,6 @@ export const projects: Project[] = [
     summary: 'A placement prediction and skill-gap analysis application with student, company, faculty, and admin areas.',
     stack: ['Java 21', 'Spring Boot', 'Thymeleaf', 'Python', 'MySQL'],
     image: `${publicBase}images/projects/placement-prediction.jpg`,
-    demo: 'https://placement-prediction-hael.onrender.com',
-    demoAccounts: [
-      { role: 'Admin', username: 'admin@skill.com', password: 'admin123' },
-      { role: 'Faculty', username: 'faculty@skill.com', password: 'faculty123' },
-      { role: 'Company', username: 'careers@google.com', password: 'GoogleHR@123' },
-      { role: 'Company', username: 'jobs@microsoft.com', password: 'MicrosoftHR@123' },
-      { role: 'Student', username: 'arjun@gmail.com', password: 'password123' },
-      { role: 'Student', username: 'sneha@gmail.com', password: 'password123' },
-    ],
     cover: '#292a2c',
     problem: 'Students and campus teams need to compare skills and placement readiness with available job requirements.',
     solution: 'The application includes role-specific workflows for students, companies, faculty, and administrators, including resume analysis and AI analysis components.',
