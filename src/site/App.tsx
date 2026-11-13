@@ -175,7 +175,7 @@ export default function App() {
         <section className="contact-section" id="contact" aria-labelledby="contact-title">
           <p className="small-label reveal">Contact</p><h2 className="reveal" id="contact-title">Have something<br /><em>interesting to build?</em></h2>
           <p className="contact-copy reveal">I’m open to conversations about software roles, collaboration, and useful problems to solve.</p>
-          {site.contactEmail ? <><a className="contact-cta reveal" href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.contactEmail)}`} target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a><p className="contact-email-note reveal">Email directly: <a className="contact-email" href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p></> : <p className="contact-pending reveal">Email address can be added in <code>src/data/site.ts</code>.</p>}
+          {site.contactEmail ? <a className="contact-cta reveal" href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.contactEmail)}`} target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">↗</span></a> : <p className="contact-pending reveal">Email address can be added in <code>src/data/site.ts</code>.</p>}
           <footer className="site-footer"><a className="wordmark wordmark-footer" href="#top">R<span className="wordmark-dot">.</span>RS</a><span>© {new Date().getFullYear()} Roshin R S</span><div>{site.github && <a href={site.github} target="_blank" rel="noreferrer">GitHub ↗</a>}{site.linkedin && <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>}<a href="#top">Back to top ↑</a></div></footer>
         </section>
       </main>
